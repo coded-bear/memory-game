@@ -10,7 +10,7 @@ const config = {
   output: { path: resolve(__dirname, "dist"), filename: "[name].js" },
   resolve: { extensions: [".js", ".jsx", ".ts", ".tsx"] },
   module: { rules: [{ test: /\.tsx?$/, use: "babel-loader", exclude: /node_modules/ }] },
-  plugins: [new HtmlWebpackPlugin({ title: "Card game 'memory'", template: "src/index.html" })]
+  plugins: [new HtmlWebpackPlugin({ title: "Card game 'memory'", template: "src/public/index.html" })]
 };
 
 if (isProd) config.optimization = { minimizer: [new TerserWebpackPlugin()] };
